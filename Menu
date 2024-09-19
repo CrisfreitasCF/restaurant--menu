@@ -1,0 +1,117 @@
+{
+
+    Console.WriteLine("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+    Console.WriteLine("x                                                                               x");
+    Console.WriteLine("x                               xxxxxx  Menu  xxxxxx                            x");
+    Console.WriteLine("x                                                                               x");
+    Console.WriteLine("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n");
+
+    // List of soups, main dishes, drinks, and desserts
+    string[] soup = new string[] { "Vegetable soup", "Chicken broth", "Fish soup", "Green broth" };
+    double[] soupPrice = new double[] { 1.50, 1.10, 1.70, 1.70, };
+    string[] dish = new string[] { "Bacalhau à Brás", "Oven-baked sea bream", "Cod with cream", "Roasted pork knuckle with potatoes", "Grilled picanha", "Entrecôte", "Mixed grill", "Vegetables à Brás", "Pasta with shrimp", "Quiche" };
+    double[] dishPrice = new double[] { 8.50, 10.00, 8.50, 9.00, 11.00, 10.00, 9.00, 6.50, 8.50, 6.00, };
+    string[] drinks = new string[] { "Coca-cola", "Ice tea", "Pineapple Sumol", "Orange Sumol", "Draft white wine", "Red wine", "Water" };
+    double[] drinkPrice = new double[] { 1.50, 1.50, 1.50, 1.50, 3.00, 3.00, 1.30, };
+    string[] desserts = new string[] { "Chocolate mousse", "Pudding", "Rice pudding", "Caramel mousse", "Fruit salad", "Ice cream" };
+    double[] dessertPrice = new double[] { 2.90, 2.80, 2.80, 2.50, 2.50, 2.00, };
+
+    string[] selection = new string[8];
+    double[] price = new double[4];
+    double[] price1 = new double[4];
+    double[] price2 = new double[4];
+    double[] price3 = new double[4];
+
+    Console.WriteLine("\n________________________________________\n");
+
+    // Soups
+    Console.WriteLine("\tSoups:\n");
+    Console.WriteLine("1- " + soup[0]);
+    Console.WriteLine("2- " + soup[1]);
+    Console.WriteLine("3- " + soup[2]);
+    Console.WriteLine("4- " + soup[3]);
+
+    Console.WriteLine();
+    int menuOption = Convert.ToInt32(Console.ReadLine());
+    selection[0] = soup[menuOption - 1];
+    price[0] = soupPrice[menuOption - 1];
+
+    Console.WriteLine("Your choice is: " + selection[0]);
+
+    Console.WriteLine("\n________________________________________\n");
+
+    // Main Dishes
+    Console.WriteLine("\tMain Dishes:\n");
+    Console.WriteLine("1- " + dish[0]);
+    Console.WriteLine("2- " + dish[1]);
+    Console.WriteLine("3- " + dish[2]);
+    Console.WriteLine("4- " + dish[3]);
+    Console.WriteLine("5- " + dish[4]);
+    Console.WriteLine("6- " + dish[5]);
+    Console.WriteLine("7- " + dish[6]);
+    Console.WriteLine("8- " + dish[7]);
+    Console.WriteLine("9- " + dish[8]);
+    Console.WriteLine("10- " + dish[9]);
+
+    Console.WriteLine();
+    menuOption = Convert.ToInt32(Console.ReadLine());
+    selection[1] = dish[menuOption - 1];
+    price1[1] = dishPrice[menuOption - 1];
+
+    Console.WriteLine("Your choice is: " + selection[1]);
+
+    Console.WriteLine("\n________________________________________\n");
+
+    // Drinks
+    Console.WriteLine("\tDrinks:\n");
+    Console.WriteLine("1- " + drinks[0]);
+    Console.WriteLine("2- " + drinks[1]);
+    Console.WriteLine("3- " + drinks[2]);
+    Console.WriteLine("4- " + drinks[3]);
+    Console.WriteLine("5- " + drinks[4]);
+    Console.WriteLine("6- " + drinks[5]);
+    Console.WriteLine("7- " + drinks[6]);
+
+    Console.WriteLine();
+    menuOption = Convert.ToInt32(Console.ReadLine());
+    selection[2] = drinks[menuOption - 1];
+    price2[2] = drinkPrice[menuOption - 1];
+
+    Console.WriteLine("Your choice is: " + selection[2]);
+
+    Console.WriteLine("\n________________________________________\n");
+
+    // Desserts
+    Console.WriteLine("\tDesserts:\n");
+    Console.WriteLine("1- " + desserts[0]);
+    Console.WriteLine("2- " + desserts[1]);
+    Console.WriteLine("3- " + desserts[2]);
+    Console.WriteLine("4- " + desserts[3]);
+    Console.WriteLine("5- " + desserts[4]);
+    Console.WriteLine("6- " + desserts[5]);
+
+    Console.WriteLine();
+    menuOption = Convert.ToInt32(Console.ReadLine());
+    selection[3] = desserts[menuOption - 1];
+    price3[3] = dessertPrice[menuOption - 1];
+
+    Console.WriteLine("Your choice is: " + selection[3]);
+
+    Console.WriteLine("\n________________________________________\n");
+
+    Console.WriteLine("\tThe cost of your selections is:\n");
+    Console.WriteLine(string.Join(":", selection[0], "  ") + price[0] + (" euros"));
+    Console.WriteLine(string.Join(":", selection[1], "  ") + price1[1] + (" euros"));
+    Console.WriteLine(string.Join(":", selection[2], "  ") + price2[2] + (" euros"));
+    Console.WriteLine(string.Join(":", selection[3], "  ") + price3[3] + (" euros\n"));
+
+    double totalValue = (double)price[0] + (double)price1[1] + (double)price2[2] + (double)price3[3];
+
+    // double totalValueWithDiscount = totalValue - 10%;
+    // Console.WriteLine("With your 10% discount, the total is: {0}", totalValueWithDiscount);
+
+    Console.WriteLine("x--------------------------------------------------x");
+    Console.WriteLine("x\tThe total value of your order is: {0}", totalValue + (" euros  x"));
+    Console.WriteLine("x__________________________________________________x");
+
+}
